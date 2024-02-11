@@ -4,6 +4,26 @@
         <meta charset="UTF-8">
         <title>Sample Web Page</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            form {
+                display: flex;
+                align-items:flex-end;
+                flex-wrap:wrap;
+                gap: 8px;
+            }
+            .name {
+                flex-grow: 1;
+                flex-basis: 90px;
+            }
+            .email {
+                flex-grow: 3;
+                flex-basis: 140px;
+            }
+            button {
+                flex-grow: 1;
+                flex-basis: 40px;
+            }
+        </style>
     </head>
     <body>
         <div class="menu-container">
@@ -41,6 +61,17 @@
                 </div>
             </div>
         </div>
+        <form>
+            <label class="name" for="name-field">
+                Name: 
+                <input id="name-field"/>
+            </label>
+            <label class="email" for="email-field">
+                Email: 
+                <input id="email-field" type="email"/>
+            </label>
+            <button>Submit</button>
+        </form>
         <div class='footer'>
             <div class='footer-item footer-one'></div>
             <div class='footer-item footer-two'></div>
